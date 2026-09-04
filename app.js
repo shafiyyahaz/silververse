@@ -1,6 +1,6 @@
 const APPS=[
 {name:"Silver Xylophone",icon:"🎹",desc:"Play, record, and create tiny melodies.",accent:"#60a5fa",url:"apps/xylophone/"},
-{name:"Lunara",icon:"🌙",desc:"A calm little space for moon notes and moods.",accent:"#a78bfa",soon:true},
+{name:"Lunara",icon:"🌙",desc:"A calm little space for moon notes and moods.",accent:"#a78bfa",url:"apps/lunara/",
 {name:"FocusFlow",icon:"◷",desc:"A focused workspace for study and tasks.",accent:"#38bdf8",soon:true},
 {name:"Pixel Studio",icon:"▦",desc:"A tiny pixel-art canvas in your browser.",accent:"#22d3ee",soon:true},
 {name:"Stellar",icon:"✦",desc:"Explore a miniature interactive universe.",accent:"#818cf8",soon:true},
