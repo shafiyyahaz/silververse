@@ -1,0 +1,85 @@
+{
+  "name": "Silververse 2.0",
+  "worlds": [
+    {
+      "id": "melody",
+      "name": "Melody World",
+      "icon": "\u266b",
+      "desc": "Create tiny melodies and discover musical moods.",
+      "accent": "blue"
+    },
+    {
+      "id": "focus",
+      "name": "Focus World",
+      "icon": "\u25c9",
+      "desc": "A calm space for concentration and study sessions.",
+      "accent": "violet"
+    },
+    {
+      "id": "mood",
+      "name": "Mood World",
+      "icon": "\u263e",
+      "desc": "Choose a feeling and keep your inner weather balanced.",
+      "accent": "aurora"
+    },
+    {
+      "id": "dream",
+      "name": "Dream World",
+      "icon": "\u2726",
+      "desc": "Slow down, imagine, and collect dreamy prompts.",
+      "accent": "moon"
+    }
+  ],
+  "surprises": {
+    "melody": [
+      "Try a 3-note melody.",
+      "Make a melody that sounds like rain.",
+      "Play only three notes and repeat the pattern."
+    ],
+    "focus": [
+      "Take one 10-minute focus sprint.",
+      "Put your phone away and start one tiny task.",
+      "Write the single most important thing to finish."
+    ],
+    "mood": [
+      "Name one thing you are grateful for.",
+      "Take three slow breaths and notice the room.",
+      "Choose a word for how you feel right now."
+    ],
+    "dream": [
+      "Imagine a city above the clouds.",
+      "Write one sentence about a moonlit library.",
+      "Invent a tiny planet with one unusual rule."
+    ]
+  },
+  "themes": [
+    {
+      "id": "cosmic",
+      "name": "Cosmic Blue",
+      "bg": "#050b1c",
+      "accent": "#78aaff",
+      "accent2": "#b28cff"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "bg": "#061514",
+      "accent": "#68e0c2",
+      "accent2": "#8ea2ff"
+    },
+    {
+      "id": "moonlight",
+      "name": "Moonlight",
+      "bg": "#0c0b18",
+      "accent": "#c4c7ff",
+      "accent2": "#8da5ff"
+    },
+    {
+      "id": "nebula",
+      "name": "Nebula",
+      "bg": "#150719",
+      "accent": "#f09cff",
+      "accent2": "#78aaff"
+    }
+  ]
+}

@@ -1,1 +1,43 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Silververse 2.0</title><link rel="stylesheet" href="style.css"></head><body><header><a href="./">✦ SILVERVERSE <small>2.0</small></a><span id="clock"></span><button id="theme">☾</button></header><main><section class="hero"><div><label>YOUR LITTLE DIGITAL UNIVERSE</label><h1>Welcome back, Stargazer ✦</h1><p>Explore creative tools, calming spaces, and tiny worlds made just for you.</p><button id="surprise">🎲 Surprise me</button></div><div class="orb">✦</div></section><section class="stats"><div><b>8</b><span>Worlds</span></div><div><b id="visits">0</b><span>Visits</span></div><div><b id="moments">0</b><span>Saved moments</span></div><div><b id="focus">0</b><span>Focus sessions</span></div></section><div class="toolbar"><input id="search" placeholder="🔎 Search a world..."><select id="filter"><option value="all">All worlds</option><option value="create">Create</option><option value="calm">Calm</option><option value="focus">Focus</option><option value="play">Play</option></select></div><section id="grid" class="grid"></section><section class="idea">💡 <div><small>TODAY'S LITTLE IDEA</small><p id="idea">Make something tiny that makes you smile.</p></div><button id="newIdea">↻</button></section></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <meta name="description" content="Silververse 2.0 — an interactive collection of musical, focus, mood and dream worlds.">
+  <title>Silververse 2.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="aurora a1" aria-hidden="true"></div>
+  <div class="aurora a2" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="brand" id="homeBtn" aria-label="Silververse home">
+      <span class="brand-orb">✦</span>
+      <span><b>SILVER</b>VERSE<small>2.0</small></span>
+    </button>
+    <nav id="worldNav" aria-label="World navigation"></nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="profileBtn" title="Profile">◉</button>
+      <button class="icon-btn" id="themeBtn" title="Theme Studio">◈</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="teleport" id="teleport" aria-hidden="true">
+    <div class="teleport-ring"></div><div class="teleport-core">✦</div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <section class="modal" id="modal" role="dialog" aria-modal="true"></section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="sound-dot" id="soundDot" title="Sound effects">♪</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
