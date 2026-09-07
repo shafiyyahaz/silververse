@@ -1,0 +1,8 @@
+Functional Fix:
+- Corrected dashboard links to the actual app folders.
+- Added shared localStorage activity/progress tracking.
+- Melody Maker triggers when a xylophone key is played.
+- Mood Keeper triggers when a Lunara mood/moment is used.
+- First World and Explorer achievements persist.
+- Profile/progress data stays across refreshes.
+- All eight World buttons now route to real app pages.

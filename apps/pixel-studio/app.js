@@ -1,1 +1,1 @@
-for(let i=0;i<256;i++){let b=document.createElement('button');b.onclick=()=>b.style.background=color.value;pixels.appendChild(b)}function clearGrid(){pixels.querySelectorAll('button').forEach(x=>x.style.background='')}
+for(let i=0;i<256;i++){let b=document.createElement('button');b.onclick=()=>{b.style.background=color.value;window.svActivity?.("pixel")};pixels.appendChild(b)}function clearGrid(){pixels.querySelectorAll('button').forEach(x=>x.style.background='')}

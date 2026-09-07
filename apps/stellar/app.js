@@ -38,7 +38,7 @@ function update(){
  document.getElementById("speed").textContent=speed.toFixed(1)+"×";
  document.getElementById("mode").textContent=mode;
 }
-document.getElementById("warp").onclick=()=>{
+document.getElementById("warp").onclick=()=>{window.svActivity?.("stellar");
  speed=4.8;mode="WARP";warpTimer=performance.now()+2200;update();
  setTimeout(()=>{speed=1;mode="CALM";update()},2200);
 };

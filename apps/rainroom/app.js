@@ -1,1 +1,1 @@
-let ac,o,g;function start(){ac??=new AudioContext();o=ac.createOscillator();g=ac.createGain();o.frequency.value=140;g.gain.value=.02;o.connect(g).connect(ac.destination);o.start()}function stop(){o?.stop();o=null}
+let ac,o,g;function start(){ac??=new AudioContext();o=ac.createOscillator();g=ac.createGain();o.frequency.value=140;g.gain.value=.02;o.connect(g).connect(ac.destination);o.start();window.svActivity?.("rain")}function stop(){o?.stop();o=null}
