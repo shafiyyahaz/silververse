@@ -1,0 +1,15 @@
+SILVERVERSE 2.0 — GAME FEEL UPGRADE
+
+Persistent progression:
+- 8 World progress
+- First World achievement
+- Melody Maker achievement
+- Mood Keeper achievement
+- Explorer achievement
+- Total activities
+- Favorite World tracking
+- Achievement notifications
+- Existing portal/teleport effect
+- Theme persistence
+
+The dashboard remains GitHub Pages friendly and uses localStorage.

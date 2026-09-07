@@ -1,1 +1,49 @@
-<!doctype html><html lang='id'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Stellar</title><link rel='stylesheet' href='style.css'><link rel='stylesheet' href='../../world.css'></head><body><header><a href='../../'>← Silververse</a><b>⭐ Stellar</b></header><main><p>SILVERVERSE WORLD</p><h1>Interactive star universe.</h1><canvas id='sky'></canvas><button onclick='warp()'>WARP ✦</button></main><script src='app.js'></script><script src='../../world.js'></script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stellar World — Silververse</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../world.css">
+</head>
+<body>
+<div class="nebula"></div>
+<header class="stellar-head">
+  <a href="../../" class="back">← Silververse</a>
+  <div class="world-title"><span>⭐</span><b>Stellar World</b></div>
+  <div class="status"><i></i> LIVE UNIVERSE</div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="eyebrow">SILVERVERSE WORLD · 06</div>
+    <h1>Interactive<br><span>star universe.</span></h1>
+    <p>Temukan bintang, ubah kecepatannya, dan masuk ke mode warp.</p>
+    <div class="controls">
+      <button id="warp" class="primary">⚡ WARP</button>
+      <button id="calm">✦ CALM</button>
+      <button id="reset">↺ RESET</button>
+    </div>
+  </section>
+
+  <section class="sky-card">
+    <canvas id="sky"></canvas>
+    <div class="planet planet-a"></div>
+    <div class="planet planet-b"></div>
+    <div class="orbit orbit-a"></div>
+    <div class="orbit orbit-b"></div>
+    <div class="sky-label"><span id="speed">1.0×</span><small>STAR SPEED</small></div>
+  </section>
+
+  <section class="stellar-stats">
+    <div><span id="count">180</span><small>stars</small></div>
+    <div><span id="distance">∞</span><small>distance</small></div>
+    <div><span id="mode">CALM</span><small>mode</small></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<script src="../../world.js"></script>
+</body>
+</html>

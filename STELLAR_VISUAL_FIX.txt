@@ -1,0 +1,5 @@
+Stellar World visual fix:
+- Fixed black square stars caused by canvas fillStyle defaulting to black.
+- Redesigned Stellar with nebula atmosphere, star field, planets, orbit lines, glass UI and responsive layout.
+- Added Warp, Calm and Reset controls.
+- Existing Silververse dashboard and other apps are preserved.
