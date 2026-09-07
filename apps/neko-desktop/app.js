@@ -1,0 +1,1 @@
+function act(t){status.textContent=t;cat.style.transform='translateY(-8px) rotate(2deg)';setTimeout(()=>cat.style.transform='',400)}

@@ -1,0 +1,1 @@
+let c=sky,x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;let s=Array.from({length:180},()=>({x:Math.random()*c.width,y:Math.random()*c.height,z:Math.random()*2+1}));function loop(){x.clearRect(0,0,c.width,c.height);s.forEach(a=>{a.y+=a.z;if(a.y>c.height)a.y=0;x.fillRect(a.x,a.y,a.z,a.z)});requestAnimationFrame(loop)}loop();function warp(){s.forEach(a=>a.z*=3)}

@@ -1,0 +1,1 @@
+function upd(){preview.style.background=`linear-gradient(135deg,${a.value},${b.value})`;code.textContent=preview.style.background}a.oninput=upd;b.oninput=upd;upd()
