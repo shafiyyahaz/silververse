@@ -1,0 +1,18 @@
+SILVERVERSE 2.0 — 8 WORLDS ULTIMATE
+
+Dashboard upgrade:
+- 8 World cards
+- Surprise Me
+- Animated star background
+- Teleport transition
+- Achievement system
+- Profile & progress
+- Theme Studio
+- Sound effects
+- Search
+- Responsive mobile layout
+
+Existing apps/folders are preserved from the supplied project ZIP.
+Open index.html or deploy the folder to GitHub Pages.
+
+If an app folder has a different filename/path, update its URL in index.html.
