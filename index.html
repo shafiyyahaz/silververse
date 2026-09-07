@@ -1,43 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#07152f">
-  <meta name="description" content="Silververse 2.0 — an interactive collection of musical, focus, mood and dream worlds.">
-  <title>Silververse 2.0</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071225"><title>Silververse 2.0 — 8 Worlds</title>
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="aurora a1" aria-hidden="true"></div>
-  <div class="aurora a2" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <button class="brand" id="homeBtn" aria-label="Silververse home">
-      <span class="brand-orb">✦</span>
-      <span><b>SILVER</b>VERSE<small>2.0</small></span>
-    </button>
-    <nav id="worldNav" aria-label="World navigation"></nav>
-    <div class="top-actions">
-      <button class="icon-btn" id="profileBtn" title="Profile">◉</button>
-      <button class="icon-btn" id="themeBtn" title="Theme Studio">◈</button>
-    </div>
-  </header>
-
-  <main id="app"></main>
-
-  <div class="teleport" id="teleport" aria-hidden="true">
-    <div class="teleport-ring"></div><div class="teleport-core">✦</div>
-  </div>
-
-  <div class="modal-backdrop" id="modalBackdrop">
-    <section class="modal" id="modal" role="dialog" aria-modal="true"></section>
-  </div>
-
-  <div class="toast" id="toast"></div>
-  <div class="sound-dot" id="soundDot" title="Sound effects">♪</div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="starfield" aria-hidden="true"></div><div class="aurora a1"></div><div class="aurora a2"></div>
+<div id="teleport" class="teleport" aria-hidden="true"><div class="warp">✦</div><b>Entering world…</b></div>
+<header>
+  <a class="brand" href="./">✦ SILVERVERSE <small>2.0</small></a>
+  <div class="head-actions"><span id="clock"></span><button id="profile" title="Profile">👤</button><button id="theme" title="Theme Studio">🎨</button><button id="sound" title="Sound effects">🔊</button></div>
+</header>
+<main>
+<section class="hero">
+ <div class="hero-copy"><label>YOUR LITTLE DIGITAL UNIVERSE</label><h1>Welcome back, Stargazer ✦</h1>
+ <p>Eight tiny worlds for creating, focusing, relaxing, dreaming, and playing.</p>
+ <div class="hero-actions"><button class="primary" id="surprise">🎲 Surprise me</button><button id="achievementBtn">🏆 Achievements</button></div></div>
+ <div class="orb"><span>✦</span><i></i></div>
+</section>
+<section class="stats">
+ <div><b id="visits">0</b><span>Visits</span></div><div><b id="worlds">0</b><span>Worlds opened</span></div><div><b id="achievements">0</b><span>Achievements</span></div><div><b id="moments">0</b><span>Saved moments</span></div>
+</section>
+<div class="toolbar"><input id="search" placeholder="🔎 Search a world..." autocomplete="off"><select id="filter"><option value="all">All worlds</option><option value="create">Create</option><option value="calm">Calm</option><option value="focus">Focus</option><option value="play">Play</option><option value="dream">Dream</option></select></div>
+<section class="section-head"><div><small>EXPLORE THE UNIVERSE</small><h2>8 Worlds</h2></div><button id="newIdea">↻ New idea</button></section>
+<section id="grid" class="grid"></section>
+<section class="idea">💡 <div><small>TODAY'S LITTLE IDEA</small><p id="idea">Make something tiny that makes you smile.</p></div></section>
+</main>
+<div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button class="close" data-close>×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body></html>
