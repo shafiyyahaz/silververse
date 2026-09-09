@@ -1,198 +1,63 @@
 <!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Silververse 2.0 — Cosmic Dashboard</title>
-<meta name="description" content="Silververse 2.0 — 8 Worlds cosmic productivity playground.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Silververse ✦ Little Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{
- --bg:#050816;--panel:rgba(14,21,43,.72);--panel2:rgba(18,29,57,.86);--line:rgba(160,190,255,.16);
- --text:#eef4ff;--muted:#9eacd0;--accent:#7aa8ff;--accent2:#b58cff;--good:#7ff0c7;
- --shadow:0 24px 70px rgba(0,0,0,.35);--radius:24px;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;color:var(--text);font-family:Inter,system-ui,sans-serif;background:
-radial-gradient(circle at 15% 5%,rgba(75,125,255,.18),transparent 28%),
-radial-gradient(circle at 90% 15%,rgba(181,140,255,.15),transparent 26%),
-linear-gradient(180deg,#050816 0%,#070b1b 45%,#050713 100%);min-height:100vh;overflow-x:hidden}
-#stars,#stars2{position:fixed;inset:0;pointer-events:none;z-index:-1;background-repeat:repeat}
-#stars{background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 140px 80px,#a8c8ff,transparent),radial-gradient(1px 1px at 300px 160px,#fff,transparent);background-size:380px 260px;opacity:.55;animation:drift 34s linear infinite}
-#stars2{background-image:radial-gradient(1px 1px at 60px 120px,#fff,transparent),radial-gradient(1px 1px at 220px 40px,#bda7ff,transparent);background-size:520px 340px;opacity:.3;animation:drift 52s linear infinite reverse}
-@keyframes drift{to{transform:translate3d(-380px,260px,0)}}
-.wrap{max-width:1240px;margin:auto;padding:24px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:20;padding:12px 0;background:linear-gradient(180deg,rgba(5,8,22,.92),rgba(5,8,22,.62),transparent);backdrop-filter:blur(10px)}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;font-size:22px;background:linear-gradient(135deg,#6f9cff,#b78bff);box-shadow:0 0 30px rgba(122,168,255,.3)}
-.brand b{font-family:"Space Grotesk";font-size:20px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-button{border:1px solid var(--line);color:var(--text);background:rgba(20,30,58,.72);padding:10px 13px;border-radius:13px;cursor:pointer;font:inherit;font-weight:600;transition:.2s}
-button:hover{transform:translateY(-2px);border-color:rgba(140,180,255,.45);background:rgba(31,46,84,.9)}
-.primary{background:linear-gradient(135deg,#5f8fff,#9e75ef);border:0;box-shadow:0 10px 28px rgba(98,135,255,.2)}
-.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-top:28px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
-.heroMain{padding:38px;position:relative;overflow:hidden}
-.heroMain:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-100px;top:-100px;background:radial-gradient(circle,rgba(127,240,199,.2),transparent 65%)}
-.eyebrow{color:var(--good);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-h1{font-family:"Space Grotesk";font-size:clamp(38px,6vw,72px);line-height:.98;margin:12px 0 18px;letter-spacing:-.05em}
-.heroMain p{max-width:700px;color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 22px}
-.heroBtns{display:flex;gap:10px;flex-wrap:wrap}
-.stats{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.stat{padding:18px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
-.stat strong{display:block;font-size:28px;font-family:"Space Grotesk"}.stat span{color:var(--muted);font-size:12px}
-.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:38px 0 15px}
-.sectionHead h2{font-family:"Space Grotesk";font-size:27px;margin:0}.sectionHead p{margin:5px 0 0;color:var(--muted);font-size:13px}
-.tools{display:flex;gap:9px;flex-wrap:wrap}.search{min-width:220px;padding:11px 14px;border-radius:13px;border:1px solid var(--line);outline:none;background:rgba(10,16,34,.75);color:var(--text)}
-.worlds{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.world{padding:19px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;cursor:pointer;transition:.25s}
-.world:hover{transform:translateY(-6px) scale(1.01);border-color:rgba(150,190,255,.4);box-shadow:0 28px 70px rgba(0,0,0,.45)}
-.world:before{content:"";position:absolute;inset:auto -30px -60px auto;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,var(--wc),transparent 70%);opacity:.2}
-.icon{font-size:34px}.tag{font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}.world h3{margin:6px 0;font-family:"Space Grotesk";font-size:20px}.world p{color:var(--muted);font-size:12px;line-height:1.5;margin:0}.go{align-self:flex-start;margin-top:14px;font-size:12px;padding:8px 10px}
-.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.quick .card{padding:20px}
-.progress{height:8px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin-top:10px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--good));transition:1s}
-.footer{color:var(--muted);font-size:12px;text-align:center;padding:40px 0 20px}
-.modal{position:fixed;inset:0;background:rgba(1,3,12,.72);display:none;align-items:center;justify-content:center;padding:20px;z-index:100;backdrop-filter:blur(12px)}
-.modal.open{display:flex}.modalBox{width:min(620px,100%);padding:26px;max-height:86vh;overflow:auto}
-.modalHead{display:flex;justify-content:space-between;align-items:center;gap:10px}.modalHead h3{margin:0;font-family:"Space Grotesk";font-size:25px}
-.close{width:38px;height:38px;padding:0}
-.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.choice{text-align:left;padding:16px}.choice b{display:block}.choice span{font-size:12px;color:var(--muted)}
-.toast{position:fixed;right:22px;bottom:22px;padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(15,23,48,.94);box-shadow:var(--shadow);transform:translateY(30px);opacity:0;pointer-events:none;transition:.25s;z-index:150}.toast.show{transform:none;opacity:1}
-.teleport{position:fixed;inset:0;z-index:140;display:none;place-items:center;background:#02030b}.teleport.show{display:grid}.portal{width:170px;height:170px;border-radius:50%;border:2px solid #9abaff;box-shadow:0 0 30px #7aa8ff,0 0 120px #9e75ef;animation:portal 1.05s ease-in-out forwards}@keyframes portal{0%{transform:scale(.1);opacity:0}45%{opacity:1}100%{transform:scale(8);opacity:0}}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.worlds{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.wrap{padding:15px}.top{align-items:flex-start}.actions{max-width:60%}.brand small{display:none}.heroMain{padding:25px}.worlds,.quick{grid-template-columns:1fr}.world{min-height:160px}.sectionHead{align-items:flex-start;flex-direction:column}.search{width:100%;min-width:0}.choices{grid-template-columns:1fr}h1{font-size:44px}}
-</style>
-</head>
-<body>
-<div id="stars"></div><div id="stars2"></div>
-<div class="wrap">
-<header class="top">
-  <div class="brand"><div class="logo">✦</div><div><b>Silververse 2.0</b><small>8 Worlds · One Cosmic Space</small></div></div>
-  <div class="actions">
-    <button onclick="surprise()">🎲 Surprise Me</button>
-    <button onclick="openModal('profile')">👤 Profile</button>
-    <button onclick="openModal('themes')">🎨 Theme</button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="card heroMain">
-    <div class="eyebrow">✦ Welcome back, traveler</div>
-    <h1>Explore your<br>Silververse.</h1>
-    <p>Delapan World dengan suasana berbeda, animasi cosmic, progress tersimpan, achievement, dan portal teleport yang bikin dashboard terasa hidup.</p>
-    <div class="heroBtns"><button class="primary" onclick="surprise()">🎲 Surprise Me</button><button onclick="document.getElementById('worldSection').scrollIntoView()">🚀 Explore 8 Worlds</button></div>
-  </div>
-  <aside class="card stats">
-    <div class="stat"><strong id="visit">0</strong><span>Visits</span></div>
-    <div class="stat"><strong id="opened">0/8</strong><span>Worlds opened</span></div>
-    <div class="stat"><strong id="ach">0</strong><span>Achievements</span></div>
-    <div class="stat"><strong id="themeName">Cosmic</strong><span>Current theme</span></div>
-  </aside>
-</section>
-
-<section id="worldSection">
-  <div class="sectionHead"><div><h2>🌌 8 Worlds</h2><p>Pilih portal yang mau kamu jelajahi.</p></div><div class="tools"><input id="search" class="search" placeholder="🔎 Cari World..." oninput="renderWorlds()"></div></div>
-  <div id="worlds" class="worlds"></div>
-</section>
-
-<section>
- <div class="sectionHead"><div><h2>⚡ Quick Center</h2><p>Kontrol Silververse kamu.</p></div></div>
- <div class="quick">
-  <div class="card"><b>🏆 Achievement</b><p id="achText" style="color:var(--muted);font-size:13px">Mulai eksplorasi untuk membuka achievement.</p><div class="progress"><i id="achBar"></i></div></div>
-  <div class="card"><b>🧭 World Progress</b><p style="color:var(--muted);font-size:13px">Buka semua 8 World untuk menyelesaikan perjalanan.</p><div class="progress"><i id="worldBar"></i></div></div>
-  <div class="card"><b>🔊 Sound FX</b><p style="color:var(--muted);font-size:13px">Efek klik kecil untuk interaksi yang lebih hidup.</p><button onclick="toggleSound()" id="soundBtn">🔊 On</button></div>
- </div>
-</section>
-<div class="footer">Silververse 2.0 · Built for curiosity ✦</div>
-</div>
-
-<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="card modalBox"><div class="modalHead"><h3 id="modalTitle"></h3><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div>
-<div id="toast" class="toast"></div><div id="teleport" class="teleport"><div class="portal"></div></div>
-
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#f3f6ff;font-family:"DM Sans",sans-serif;background:#070b19;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 15% 8%,#5c8cff28,transparent 27%),radial-gradient(circle at 88% 18%,#d27bff22,transparent 25%),radial-gradient(circle at 55% 95%,#61e7cf14,transparent 30%),linear-gradient(135deg,#071127,#080a18 58%,#120b20)}
+body:after{content:"✦  ·  ✧    ·      ✦   ·   ✧";position:fixed;inset:0;z-index:-2;opacity:.12;color:#fff;font-size:28px;letter-spacing:45px;line-height:90px;transform:rotate(-8deg) scale(1.2);pointer-events:none;animation:drift 28s linear infinite}
+@keyframes drift{50%{transform:rotate(-8deg) translate3d(-25px,18px,0) scale(1.2)}}
+.wrap{width:min(1180px,92vw);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;z-index:20;background:#070b19cc;backdrop-filter:blur(18px);border-bottom:1px solid #fff1}
+.brand{display:flex;gap:11px;align-items:center}.logo{width:45px;height:45px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#77a9ff,#bd8cff);box-shadow:0 0 38px #789dff44;font-size:22px}.brand b{font:700 19px "Space Grotesk"}.brand small{display:block;color:#899abd;font-size:9px;letter-spacing:.1em;margin-top:2px}
+.top-actions{display:flex;gap:7px;align-items:center}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #fff1;background:#ffffff0a;padding:10px 13px;border-radius:14px;font-weight:700;transition:.2s}button:hover{transform:translateY(-2px);background:#ffffff16;border-color:#91b5ff55}.primary{border:0;background:linear-gradient(135deg,#6399ff,#a879f1);box-shadow:0 10px 35px #739bff2b}
+.hero{padding:68px 0 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center}.kicker{font-size:10px;letter-spacing:.24em;color:#7de2c5;font-weight:800}.hero h1{font:700 clamp(46px,7vw,82px)/.92 "Space Grotesk";letter-spacing:-.06em;margin:15px 0}.hero h1 span{background:linear-gradient(90deg,#fff,#9bc3ff,#d0a4ff);color:transparent;background-clip:text}.hero p{color:#99a9c6;max-width:650px;line-height:1.8;font-size:1rem}.hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.universe{position:relative;width:250px;height:250px;margin:auto;display:grid;place-items:center}.planet{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font-size:48px;background:radial-gradient(circle at 32% 28%,#fff,#9bd0ff 12%,#6879db 40%,#22254f 72%);box-shadow:0 0 100px #7c9eff66, inset -18px -18px 35px #0b0d2a77;animation:float 4s ease-in-out infinite}.ring{position:absolute;width:230px;height:78px;border:2px solid #9ec0ff55;border-radius:50%;transform:rotate(-18deg);animation:spin 12s linear infinite}.ring:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#fff;top:7px;left:35px;box-shadow:0 0 20px #fff}.ring2{width:275px;height:95px;border-color:#d59aff35;animation-duration:19s;animation-direction:reverse}@keyframes float{50%{transform:translateY(-10px) rotate(2deg)}}@keyframes spin{to{transform:rotate(360deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.stat,.panel,.world,.quick>div{background:#ffffff08;border:1px solid #fff1;border-radius:21px;box-shadow:0 20px 60px #0003;backdrop-filter:blur(14px)}.stat{padding:18px}.stat b{display:block;font:700 27px "Space Grotesk"}.stat span{font-size:11px;color:#8497b7}
+.section{padding-top:42px}.head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:15px}.head h2{font:700 26px "Space Grotesk";margin:0}.head p{color:#8193b1;font-size:12px;margin:6px 0 0}.filters{display:flex;gap:8px}.search,.filter{padding:11px 13px;border-radius:13px;border:1px solid #fff1;background:#ffffff08;color:#eef4ff;outline:0}.search{width:210px}.filter option{background:#10172b}
+.worlds{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.world{min-height:235px;padding:19px;position:relative;overflow:hidden;transition:.25s}.world:before{content:"";position:absolute;width:190px;height:190px;right:-95px;bottom:-105px;border-radius:50%;background:radial-gradient(circle,var(--c),transparent 67%);opacity:.28}.world:hover{transform:translateY(-7px) scale(1.01);border-color:#8bb3ff55;box-shadow:0 28px 70px #0006}.wt,.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative}.icon{font-size:34px;filter:drop-shadow(0 5px 14px #fff2)}.num{font-size:9px;letter-spacing:.14em;color:#7185a8}.world h3{font:700 20px "Space Grotesk";margin:16px 0 6px}.world p{color:#8fa1be;font-size:12px;line-height:1.6;margin:0;max-width:210px}.foot{margin-top:auto;padding-top:20px}.mini{font-size:11px;padding:8px 10px}.enter{background:#ffffff0d}.badge{font-size:9px;color:#8eb3ff;letter-spacing:.12em}
+.progress{padding:18px;margin-top:13px}.progressTop{display:flex;justify-content:space-between;color:#91a2bd;font-size:12px}.bar{height:10px;background:#fff0a;border-radius:20px;margin-top:10px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,#71a0ff,#bb83f4,#75e5c8);border-radius:20px;transition:.7s}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.quick>div{padding:20px}.quick b{font-size:14px}.quick p{color:#8fa1bd;font-size:12px;line-height:1.7;min-height:42px}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,25px);opacity:0;z-index:100;padding:13px 17px;border-radius:16px;border:1px solid #fff2;background:#101a30f5;backdrop-filter:blur(18px);box-shadow:0 20px 60px #0008;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal{position:fixed;inset:0;display:none;place-items:center;background:#02040ccc;backdrop-filter:blur(13px);z-index:90;padding:18px}.modal.show{display:grid}.box{width:min(650px,100%);max-height:86vh;overflow:auto;padding:27px;position:relative}.close{position:absolute;right:15px;top:15px;font-size:20px}.modal-kicker{font-size:10px;letter-spacing:.18em;color:#81b0ff}.box h2{font:700 30px "Space Grotesk";margin:8px 0 20px}.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.profile-grid div{padding:17px;border-radius:16px;background:#fff1}.profile-grid b{display:block;font:700 23px "Space Grotesk"}.profile-grid span,.muted{font-size:10px;color:#8193b0}.ach{display:flex;gap:12px;padding:13px;border-radius:15px;background:#fff1;margin:7px 0}.ach.off{opacity:.38}.ach small{display:block;color:#8193b0;margin-top:3px}.themes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.theme{padding:17px;text-align:left}.theme.active{border-color:#87afff77;background:#87afff12}.teleport{position:fixed;inset:0;z-index:200;background:#050817;display:none;place-items:center;text-align:center}.teleport.show{display:grid;animation:warp .45s ease}.warp{font-size:70px;animation:warpSpin .45s ease}.teleport b{position:absolute;margin-top:160px;letter-spacing:.12em}@keyframes warp{from{opacity:0}to{opacity:1}}@keyframes warpSpin{from{transform:scale(.2) rotate(0)}to{transform:scale(1) rotate(360deg)}}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.universe{margin-top:10px}.worlds{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.top-actions #clock{display:none}.hero{padding-top:48px}.worlds,.quick{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.head{align-items:stretch;flex-direction:column}.filters{display:flex}.search{flex:1;width:auto}.themes{grid-template-columns:1fr}.profile-grid{grid-template-columns:1fr 1fr}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><div class="brand"><div class="logo">✦</div><div><b>Silververse</b><small>YOUR TINY LITTLE UNIVERSE · 8 WORLDS</small></div></div>
+<div class="top-actions"><button onclick="surprise()">🎲 Surprise</button><button onclick="profile()">👤</button><button onclick="themes()">🎨</button><span id="clock"></span></div></header>
+<section class="hero"><div><div class="kicker">WELCOME, LITTLE TRAVELER ✦</div><h1>Welcome to your<br><span>little universe.</span></h1><p>Jelajahi dunia-dunia kecil yang bisa kamu mainkan. Kumpulkan achievement, temukan aktivitas rahasia, dan bikin perjalanan Silververse-mu sendiri.</p><div class="hero-actions"><button class="primary" onclick="surprise()">🚀 Take me somewhere</button><button onclick="document.getElementById('worldSec').scrollIntoView()">🌌 Explore Worlds</button></div></div>
+<div class="universe"><div class="ring"></div><div class="ring ring2"></div><div class="planet">✦</div></div></section>
+<section class="stats"><div class="stat"><b id="visits">0</b><span>Visits</span></div><div class="stat"><b id="opened">0/8</b><span>Worlds opened</span></div><div class="stat"><b id="achievements">0</b><span>Achievements</span></div><div class="stat"><b id="activities">0</b><span>Activities</span></div></section>
+<section class="section" id="worldSec"><div class="head"><div><h2>🌌 Explore your Worlds</h2><p>Setiap dunia punya little game-nya sendiri ♡</p></div><div class="filters"><input class="search" id="search" placeholder="🔎 Cari world..."><select class="filter" id="filter"><option value="all">All worlds</option><option value="play">Play</option><option value="focus">Focus</option><option value="calm">Calm</option><option value="create">Create</option></select></div></div><div class="worlds" id="grid"></div>
+<div class="panel progress"><div class="progressTop"><span>🧭 Universe Progress</span><b id="progressText">0 / 8 Worlds</b></div><div class="bar"><i id="progressBar"></i></div></div></section>
+<section class="section"><div class="head"><div><h2>💫 Little Corner</h2><p>Jejak kecil dari petualanganmu.</p></div></div><div class="quick"><div><b>🏆 Achievements</b><p id="achSummary">Belum ada achievement. Yuk buka world pertama!</p><button onclick="achievements()">Lihat semua</button></div><div><b>🪐 Last Adventure</b><p id="last">Belum ada World yang dibuka.</p><button onclick="surprise()">🎲 Surprise</button></div><div><b>❤️ Favorite World</b><p id="fav">Belum ada favorit.</p></div></div></section>
+<footer style="text-align:center;color:#667895;font-size:11px;padding:50px 0 22px">Made with ✦ for Silververse · Explore • Create • Play</footer></div>
+<div class="modal" id="modal"><div class="panel box"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div><div class="toast" id="toast"></div>
+<div class="teleport" id="teleport"><div class="warp">✦</div><b>WARPING TO YOUR WORLD...</b></div>
 <script>
-const worlds=[
-{id:'melody',icon:'🎵',name:'Melody World',tag:'Sound',desc:'Play, create, dan nikmati dunia musik.',color:'#6f9cff',url:'apps/xylophone/index.html'},
-{id:'focus',icon:'🎯',name:'Focus World',tag:'Productivity',desc:'Tempat tenang untuk fokus dan menyelesaikan tugas.',color:'#7ff0c7',url:'apps/focusflow/index.html'},
-{id:'mood',icon:'🌙',name:'Mood World',tag:'Wellbeing',desc:'Kenali mood dan bangun suasana yang nyaman.',color:'#b58cff',url:'apps/lunara/index.html'},
-{id:'dream',icon:'✨',name:'Dream World',tag:'Creative',desc:'Eksplorasi warna dan ide-ide kreatif.',color:'#ff9ecf',url:'apps/colorlab/index.html'},
-{id:'pixel',icon:'🎨',name:'Pixel World',tag:'Playground',desc:'Masuk ke ruang pixel dan eksperimen visual.',color:'#ffbd70',url:'apps/pixel-studio/index.html'},
-{id:'stellar',icon:'⭐',name:'Stellar World',tag:'Cosmic',desc:'Jelajahi bintang, planet, dan nuansa luar angkasa.',color:'#83b8ff',url:'apps/stellar/index.html'},
-{id:'rain',icon:'🌧️',name:'Rain World',tag:'Ambient',desc:'Suasana hujan yang lembut untuk menemani aktivitas.',color:'#72d5e8',url:'apps/rainroom/index.html'},
-{id:'neko',icon:'🐱',name:'Neko World',tag:'Cute',desc:'Dunia kucing kecil yang santai dan playful.',color:'#ff9b8d',url:'apps/neko-desktop/index.html'}
+const WORLDS=[
+{id:"melody",name:"Melody World",icon:"🎵",desc:"Mainkan nada dan buat melodi kecil.",cat:"play",path:"apps/melody/"},
+{id:"focus",name:"Focus World",icon:"🎯",desc:"Sesi fokus dengan progress yang terasa seperti game.",cat:"focus",path:"apps/focus/"},
+{id:"mood",name:"Mood World",icon:"🌙",desc:"Pilih mood dan simpan moment kecil.",cat:"calm",path:"apps/mood/"},
+{id:"dream",name:"Dream World",icon:"✨",desc:"Campur warna dan bikin dunia dreamy.",cat:"create",path:"apps/dream/"},
+{id:"pixel",name:"Pixel World",icon:"🎨",desc:"Lukis pixel art di canvas mini.",cat:"create",path:"apps/pixel/"},
+{id:"stellar",name:"Stellar World",icon:"⭐",desc:"Tangkap bintang dalam mini star hunt.",cat:"play",path:"apps/stellar/"},
+{id:"rain",name:"Rain World",icon:"🌧️",desc:"Mainkan hujan dan tangkap tetesan cahaya.",cat:"calm",path:"apps/rain/"},
+{id:"neko",name:"Neko World",icon:"🐱",desc:"Rawat Neko, mainkan mini-game, dan kumpulkan hearts.",cat:"play",path:"apps/neko/"}
 ];
-const themes={
-Cosmic:{accent:'#7aa8ff',accent2:'#b58cff',good:'#7ff0c7'},
-Aurora:{accent:'#5ee7c5',accent2:'#8c9eff',good:'#d7ff78'},
-Moonlight:{accent:'#b8c8ff',accent2:'#8fa4d8',good:'#e7ecff'},
-Nebula:{accent:'#ff82c8',accent2:'#a879ff',good:'#8fe9ff'}
-};
-let state=JSON.parse(localStorage.getItem('silververse2')||'null')||{visits:0,opened:[],achievements:[],theme:'Cosmic',sound:true};
-state.visits++; save();
-
-function save(){localStorage.setItem('silververse2',JSON.stringify(state));}
-function sfx(){if(!state.sound)return;try{const c=new AudioContext(),o=c.createOscillator(),g=c.createGain();o.frequency.value=520;g.gain.value=.035;o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.055)}catch(e){}}
-function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}
-function render(){
- document.getElementById('visit').textContent=state.visits;
- document.getElementById('opened').textContent=state.opened.length+'/8';
- document.getElementById('ach').textContent=state.achievements.length;
- document.getElementById('themeName').textContent=state.theme;
- document.getElementById('worldBar').style.width=(state.opened.length/8*100)+'%';
- document.getElementById('achBar').style.width=(state.achievements.length/5*100)+'%';
- document.getElementById('achText').textContent=state.achievements.length?state.achievements.join(' · '):'Mulai eksplorasi untuk membuka achievement.';
- document.getElementById('soundBtn').textContent=state.sound?'🔊 On':'🔇 Off';
- renderWorlds(); applyTheme();
-}
-function renderWorlds(){
- const q=(document.getElementById('search').value||'').toLowerCase();
- document.getElementById('worlds').innerHTML=worlds.filter(w=>(w.name+w.tag+w.desc).toLowerCase().includes(q)).map(w=>`
- <article class="card world" style="--wc:${w.color}" onclick="openWorld('${w.id}')">
-  <div><div class="icon">${w.icon}</div><div class="tag">${w.tag}</div><h3>${w.name}</h3><p>${w.desc}</p></div>
-  <button class="go" onclick="event.stopPropagation();openWorld('${w.id}')">Enter World →</button>
- </article>`).join('');
-}
-function unlock(a){
- if(!state.achievements.includes(a)){state.achievements.push(a);save();toast('🏆 Achievement unlocked: '+a);sfx();}
-}
-function openWorld(id){
- const w=worlds.find(x=>x.id===id); if(!w)return;
- sfx();
- if(!state.opened.includes(id))state.opened.push(id);
- if(id==='melody')unlock('First Melody');
- if(state.opened.length>=4)unlock('World Traveler');
- if(state.opened.length>=8)unlock('Universe Explorer');
- save();render();
- const t=document.getElementById('teleport');t.classList.add('show');
- setTimeout(()=>{window.location.href=w.url},650);
-}
-function surprise(){
- sfx();const w=worlds[Math.floor(Math.random()*worlds.length)];
- toast('🎲 Surprise: '+w.name+'!');
- setTimeout(()=>openWorld(w.id),500);
-}
-function openModal(type){
- sfx();document.getElementById('modal').classList.add('open');
- const title=document.getElementById('modalTitle'),body=document.getElementById('modalBody');
- if(type==='profile'){
-  title.textContent='👤 Your Profile';
-  body.innerHTML=`<div class="stats" style="padding:0;margin-top:18px">
-  <div class="stat"><strong>${state.visits}</strong><span>Total visits</span></div>
-  <div class="stat"><strong>${state.opened.length}/8</strong><span>Worlds explored</span></div>
-  <div class="stat"><strong>${state.achievements.length}</strong><span>Achievements</span></div>
-  <div class="stat"><strong>${Math.round(state.opened.length/8*100)}%</strong><span>Journey</span></div></div>
-  <p style="color:var(--muted);margin-top:18px">🏆 ${state.achievements.length?state.achievements.join(' · '):'Belum ada achievement.'}</p>`;
- }else{
-  title.textContent='🎨 Theme Studio';
-  body.innerHTML='<div class="choices">'+Object.keys(themes).map(k=>`<button class="choice" onclick="setTheme('${k}')"><b>${k}</b><span>Change your cosmic atmosphere</span></button>`).join('')+'</div>';
- }
-}
-function closeModal(){document.getElementById('modal').classList.remove('open')}
-function setTheme(k){state.theme=k;save();applyTheme();closeModal();toast('🎨 Theme changed to '+k);sfx();render()}
-function applyTheme(){const t=themes[state.theme]||themes.Cosmic;document.documentElement.style.setProperty('--accent',t.accent);document.documentElement.style.setProperty('--accent2',t.accent2);document.documentElement.style.setProperty('--good',t.good)}
-function toggleSound(){state.sound=!state.sound;save();render();toast(state.sound?'🔊 Sound ON':'🔇 Sound OFF')}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-render();
-</script>
-</body>
-</html>
+const ACH=[["first","🌟 First World","Buka World pertama"],["melody","🎵 Melody Maker","Mainkan Melody"],["mood","🌙 Mood Keeper","Simpan moment"],["focus","🎯 Focus Master","Mulai Focus"],["stellar","⭐ Stargazer","Tangkap bintang"],["dream","✨ Dreamer","Buat kombinasi warna"],["pixel","🎨 Pixel Maker","Gambar pixel"],["rain","🌧️ Rainy Soul","Mainkan Rain"],["neko","🐱 Neko Friend","Berinteraksi dengan Neko"],["traveler","🧭 Explorer I","Buka 4 World"],["complete","🚀 Universe Explorer","Buka semua 8 World"]];
+const KEY="sv2State";let state=JSON.parse(localStorage.getItem(KEY)||"{}");state.visits=(+state.visits||0)+1;state.opened=Array.isArray(state.opened)?state.opened:[];state.ach=Array.isArray(state.ach)?state.ach:[];state.activities=+state.activities||0;state.favorites=state.favorites||{};state.last=state.last||"";state.theme=state.theme||"cosmic";localStorage.setItem(KEY,JSON.stringify(state));
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function toast(x){const t=document.getElementById("toast");t.textContent=x;t.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove("show"),2800)}
+function unlock(id){if(!state.ach.includes(id)){state.ach.push(id);save();toast("✨ Achievement unlocked! "+(ACH.find(a=>a[0]===id)||["","🏆",""])[1])}}
+function enter(w){state.activities++;if(!state.opened.includes(w.id))state.opened.push(w.id);state.favorites[w.id]=(state.favorites[w.id]||0)+1;state.last=w.name;unlock("first");if(w.id!=="first") unlock(w.id);if(state.opened.length>=4)unlock("traveler");if(state.opened.length===8)unlock("complete");save();render();toast("💫 " + w.name);document.getElementById("teleport").classList.add("show");setTimeout(()=>location.href=w.path,480)}
+function surprise(){enter(WORLDS[Math.floor(Math.random()*WORLDS.length)])}
+function render(){let q=document.getElementById("search").value.toLowerCase().trim(),cat=document.getElementById("filter").value;let list=WORLDS.filter(w=>(cat==="all"||w.cat===cat)&&(w.name+" "+w.desc).toLowerCase().includes(q));document.getElementById("grid").innerHTML=list.map((w,i)=>`<article class="world" style="--c:${["#79a7ff","#75e4c5","#c18cff","#ff9dcc","#ffc978","#8abaff","#71dbe8","#ff9f9f"][WORLDS.indexOf(w)]}"><div class="wt"><span class="icon">${w.icon}</span><span class="num">WORLD ${String(WORLDS.indexOf(w)+1).padStart(2,"0")}</span></div><h3>${w.name}</h3><p>${w.desc}</p><div class="foot"><button class="mini" onclick="event.stopPropagation();surpriseIdea('${w.id}')">🎲 Tiny idea</button><button class="enter" onclick="event.stopPropagation();enter(WORLDS.find(x=>x.id==='${w.id}'))">Play →</button></div></article>`).join("")||"<div style='grid-column:1/-1;text-align:center;padding:50px;color:#8395b2'>World tidak ditemukan ✦</div>";
+document.getElementById("visits").textContent=state.visits;document.getElementById("opened").textContent=state.opened.length+"/8";document.getElementById("achievements").textContent=state.ach.length;document.getElementById("activities").textContent=state.activities;document.getElementById("progressText").textContent=state.opened.length+" / 8 Worlds";document.getElementById("progressBar").style.width=(state.opened.length/8*100)+"%";document.getElementById("achSummary").textContent=state.ach.length?state.ach.map(id=>(ACH.find(a=>a[0]===id)||["",id])[1]).join(" · "):"Belum ada achievement. Yuk buka world pertama!";document.getElementById("last").textContent=state.last||"Belum ada World yang dibuka.";let f=Object.entries(state.favorites).sort((a,b)=>b[1]-a[1])[0];document.getElementById("fav").textContent=f?WORLDS.find(w=>w.id===f[0]).name:"Belum ada favorit."}
+function surpriseIdea(id){const ideas={melody:"Coba bikin melodi yang terdengar seperti pagi.",focus:"Tantang dirimu menyelesaikan satu hal kecil.",mood:"Simpan satu moment baik hari ini.",dream:"Buat warna langit versi kamu.",pixel:"Gambar satu ikon mungil.",stellar:"Tangkap semua bintang yang kamu lihat.",rain:"Cari tetesan cahaya sebanyak mungkin.",neko:"Kasih Neko perhatian ekstra hari ini."};toast(WORLDS.find(w=>w.id===id).icon+" "+ideas[id])}
+function achievements(){openModal(`<div class="modal-kicker">YOUR COLLECTION</div><h2>${state.ach.length}/${ACH.length} unlocked</h2>${ACH.map(a=>`<div class="ach ${state.ach.includes(a[0])?"":"off"}"><span>${state.ach.includes(a[0])?"🏆":"🔒"}</span><div><b>${a[1]}</b><small>${a[2]}</small></div></div>`).join("")}`)}
+function profile(){let f=Object.entries(state.favorites).sort((a,b)=>b[1]-a[1])[0];openModal(`<div class="modal-kicker">TRAVELER CARD</div><h2>Little Traveler ✦</h2><div class="profile-grid"><div><b>${state.opened.length}/8</b><span>Worlds</span></div><div><b>${state.ach.length}</b><span>Achievements</span></div><div><b>${state.activities}</b><span>Activities</span></div></div><p class="muted" style="line-height:1.8">Favorite: ${f?WORLDS.find(w=>w.id===f[0]).name:"—"}<br>Universe progress: ${Math.round(state.opened.length/8*100)}%</p>`)}
+function themes(){const ts=[["cosmic","🌌","Cosmic"],["moon","🌙","Moonlight"],["aurora","🌿","Aurora"],["dreamy","🌸","Dreamy"]];openModal(`<div class="modal-kicker">ATMOSPHERE</div><h2>Choose your vibe</h2><div class="themes">${ts.map(t=>`<button class="theme ${state.theme===t[0]?"active":""}" onclick="setTheme('${t[0]}')">${t[1]} <b>${t[2]}</b></button>`).join("")}</div>`)}
+function setTheme(t){state.theme=t;save();document.body.dataset.theme=t;closeModal();toast("🎨 "+t+" mode")}
+function openModal(x){document.getElementById("modalBody").innerHTML=x;document.getElementById("modal").classList.add("show")}function closeModal(){document.getElementById("modal").classList.remove("show")}
+document.getElementById("search").oninput=render;document.getElementById("filter").onchange=render;document.getElementById("modal").onclick=e=>{if(e.target.id==="modal")closeModal()};setInterval(()=>document.getElementById("clock").textContent=new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"}),1000);render();
+</script></body></html>

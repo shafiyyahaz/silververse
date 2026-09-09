@@ -1,27 +1,18 @@
-# Silververse 2.0 — 8 Worlds 🚀
+# Silververse 2.0 ✦
 
-Versi ini dibangun dari Silververse project yang kamu kirim dan mempertahankan semua aplikasi di folder `apps/`.
+A cute, lightweight 8-world mini universe designed for static hosting / GitHub Pages.
 
-## 8 Worlds
-1. 🎵 Melody World — Silver Xylophone
-2. 🎯 Focus World — FocusFlow
-3. 🌙 Mood World — Lunara
-4. ✨ Dream World — ColorLab
-5. 🎨 Pixel World — Pixel Studio
-6. ⭐ Stellar World — Stellar
-7. 🌧️ Rain World — Rainroom
-8. 🐱 Neko World — Neko Desktop
+## Worlds
+- Melody
+- Focus
+- Mood
+- Dream
+- Pixel
+- Stellar
+- Rain — playable 30-second droplet catcher
+- Neko — playable companion game with hearts, meters, levels and a tiny challenge
 
-## Upgrade
-- 🎲 Surprise Me di dashboard + tombol Surprise di setiap World
-- 🌌 Animated star background
-- 🔄 Teleport transition
-- 🏆 Achievement system
-- 💾 Profile & progress via localStorage
-- 🎨 Theme Studio: Cosmic Blue, Aurora, Moonlight, Nebula
-- 🔊 Sound effects yang bisa diaktifkan/nonaktifkan
-- 📱 Responsive mobile layout
-- 🔎 Search + category filter
+## Deploy
+Upload the contents of this project to a GitHub repository and enable GitHub Pages from the repository's Pages settings.
 
-## GitHub Pages
-Upload seluruh isi ZIP ke root repository GitHub Pages. Jangan memindahkan folder `apps/`.
+No build step is required. Everything is plain HTML/CSS/JS.

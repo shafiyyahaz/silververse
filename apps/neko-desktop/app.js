@@ -1,1 +1,2 @@
-function act(t){window.svActivity?.("neko");status.textContent=t;cat.style.transform='translateY(-8px) rotate(2deg)';setTimeout(()=>cat.style.transform='',400)}
+
+let h=0;function act(text){h++;hearts.textContent="♡ "+h;status.textContent=text;cat.animate([{transform:"translateY(0)"},{transform:"translateY(-14px)"},{transform:"translateY(0)"}],{duration:350});let s=JSON.parse(localStorage.getItem("sv2State")||"{}");s.activities=(+s.activities||0)+1;s.ach=Array.isArray(s.ach)?s.ach:[];if(!s.ach.includes("neko"))s.ach.push("neko");localStorage.setItem("sv2State",JSON.stringify(s))}pet.onclick=()=>act("Neko loves the pets ✦");snack.onclick=()=>act("Neko got a snack! 🍪");sleep.onclick=()=>act("Neko is taking a tiny nap 💤");
