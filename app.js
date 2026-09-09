@@ -1,12 +1,12 @@
 const WORLDS=[
-{id:"melody",name:"Melody World",icon:"🎵",desc:"Play tiny melodies and sounds.",cat:"play",path:"apps/xylophone/"},
-{id:"focus",name:"Focus World",icon:"🎯",desc:"A calm workspace for focused sessions.",cat:"focus",path:"apps/focusflow/"},
-{id:"mood",name:"Mood World",icon:"🌙",desc:"Journal your moods and save little moments.",cat:"calm",path:"apps/lunara/"},
-{id:"dream",name:"Dream World",icon:"✨",desc:"Turn colors and ideas into dreamy creations.",cat:"dream",path:"apps/colorlab/"},
-{id:"pixel",name:"Pixel World",icon:"🎨",desc:"Create your own little pixel-art universe.",cat:"create",path:"apps/pixel-studio/"},
+{id:"melody",name:"Melody World",icon:"🎵",desc:"Play tiny melodies and sounds.",cat:"play",path:"apps/melody/"},
+{id:"focus",name:"Focus World",icon:"🎯",desc:"A calm workspace for focused sessions.",cat:"focus",path:"apps/focus/"},
+{id:"mood",name:"Mood World",icon:"🌙",desc:"Journal your moods and save little moments.",cat:"calm",path:"apps/mood/"},
+{id:"dream",name:"Dream World",icon:"✨",desc:"Turn colors and ideas into dreamy creations.",cat:"dream",path:"apps/dream/"},
+{id:"pixel",name:"Pixel World",icon:"🎨",desc:"Create your own little pixel-art universe.",cat:"create",path:"apps/pixel/"},
 {id:"stellar",name:"Stellar World",icon:"⭐",desc:"Explore a glowing star universe.",cat:"play",path:"apps/stellar/"},
-{id:"rain",name:"Rain World",icon:"🌧️",desc:"A peaceful ambient rain space.",cat:"calm",path:"apps/rainroom/"},
-{id:"neko",name:"Neko World",icon:"🐱",desc:"A tiny playful cat companion.",cat:"play",path:"apps/neko-desktop/"}
+{id:"rain",name:"Rain World",icon:"🌧️",desc:"A peaceful ambient rain space.",cat:"calm",path:"apps/rain/"},
+{id:"neko",name:"Neko World",icon:"🐱",desc:"A tiny playful cat companion.",cat:"play",path:"apps/neko/"}
 ];
 const ideas=["Make something tiny that makes you smile.","Write one sentence about your day.","Try a new color combination.","Create a 5-second melody.","Finish one small task today.","Open a world you haven't visited yet.","Take a quiet minute and breathe."];
 const surprises={
