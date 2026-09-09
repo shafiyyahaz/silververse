@@ -1,8 +1,16 @@
-Functional Fix:
-- Corrected dashboard links to the actual app folders.
-- Added shared localStorage activity/progress tracking.
-- Melody Maker triggers when a xylophone key is played.
-- Mood Keeper triggers when a Lunara mood/moment is used.
-- First World and Explorer achievements persist.
-- Profile/progress data stays across refreshes.
-- All eight World buttons now route to real app pages.
+SILVERVERSE 2.0 — FUNCTIONAL FIX v2
+
+Melody World
+- Rebuilt Web Audio interaction with AudioContext resume fallback.
+- Notes are real clickable buttons and show pressed feedback.
+- Activity/achievement state remains compatible with sv2State.
+
+Focus World
+- Rebuilt timer using requestAnimationFrame + Date.now for reliable countdown.
+- Start/Pause/Reset buttons now update state and disabled status clearly.
+- Pause preserves remaining time; Reset returns to 25:00.
+- Completed sessions are saved in focusSessions.
+
+IMPORTANT
+Open the project from the ZIP root (index.html). The main launcher routes:
+apps/melody/ and apps/focus/.
